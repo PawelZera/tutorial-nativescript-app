@@ -47,6 +47,7 @@ export function HomeScreen({ navigation }: HomeScreenProps) {
     )
   }
 
+  // Add this 👇
   const onItemTap = (args: ItemEventDaa) => {
     const index = args.index
     const flick = flicks[index]
