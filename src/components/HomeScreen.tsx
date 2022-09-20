@@ -47,11 +47,20 @@ export function HomeScreen({ navigation }: HomeScreenProps) {
     )
   }
 
+  const onItemTap = (args: ItemEventDaa) => {
+    const index = args.index
+    const flick = flicks[index]
+    navigation.navigate('Details', {
+      flickId: flick.id
+    })
+  }
+
   return (
     <stackLayout height="100%">
       <ListView
         items={flicks}
         cellFactory={cellFactory}
+        onItemTap={onItemTap}
         separatorColor="transparent"
         height="100%"
       />
